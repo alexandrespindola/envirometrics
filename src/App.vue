@@ -8,7 +8,7 @@ import StatsCard from './components/StatsCard.vue'
 
 const store = useWeatherStore()
 
-// Computed para estatísticas do dashboard
+// Computed for dashboard statistics
 const totalLocations = computed(() => store.locations.length)
 const selectedLocationName = computed(() => store.selectedLocation?.name || 'No location selected')
 </script>
@@ -17,33 +17,17 @@ const selectedLocationName = computed(() => store.selectedLocation?.name || 'No 
   <div class="min-h-screen bg-base-200">
     <!-- Navbar -->
     <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl">
-          <span class="font-bold text-primary">Enviro</span>
-          <span class="font-normal">Metrics</span>
+      <div class="flex flex-row">
+        <a class="flex flex-row text-xl">
+          <img src="@/assets/img/logo.svg" alt="EnviroMetrics Logo" class="self-center  h-8 w-8 mr-2">
+          <span class="self-center font-bold text-primary">Enviro</span>
+          <span class="self-center font-normal">Metrics</span>
         </a>
-        <div class="hidden md:block ml-4 text-sm text-base-content/70">
+        <div class="self-center hidden md:block ml-4 text-sm text-base-content/70">
           Environmental Monitoring Dashboard
         </div>
       </div>
-      <div class="flex-none gap-2">
-        <!-- Theme Controller (opcional) -->
-        <button class="btn btn-ghost btn-circle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="w-5 h-5 stroke-current"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            ></path>
-          </svg>
-        </button>
-      </div>
+      <div class="flex-none gap-2"></div>
     </div>
 
     <!-- Main Content -->
@@ -165,12 +149,12 @@ const selectedLocationName = computed(() => store.selectedLocation?.name || 'No 
 </template>
 
 <style scoped>
-/* Animação suave para transições */
+/* Smooth animation for transitions */
 .space-y-3 > * {
   transition: all 0.2s ease-in-out;
 }
 
-/* Responsividade adicional */
+/* Additional responsiveness */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;

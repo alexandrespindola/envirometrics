@@ -17,7 +17,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  locationName: 'Unkown',
+  locationName: 'Unknown',
 })
 
 const formattedTime = computed(() => {
