@@ -80,6 +80,36 @@ const temperatureColor = computed(() => {
         </div>
 
         <!-- Metrics Grid -->
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Humidity -->
+          <div class="stat bg-base-200 rounded-lg p-3">
+            <div class="stat-title text-xs">Humidity</div>
+            <div class="stat-value text-2xl text-info">{{ weather.humidity }}</div>
+          </div>
+
+          <!-- Pressure -->
+          <div class="stat bg-base-200 rounded-lg p-3">
+            <div class="stat-title text-xs">Pressure</div>
+            <div class="stat-value text-2xl text-secondary">{{ weather.pressure }} hPa</div>
+          </div>
+
+          <!-- Wind Speed -->
+          <div class="stat bg-base-200 rounded-lg p-3">
+            <div class="stat-title text-xs">Wind Speed</div>
+            <div class="stat-value text-2xl text-accent">{{ weather.windSpeed }} km/h</div>
+          </div>
+
+          <!-- Precipitation -->
+          <div class="stat bg-base-200 rounded-lg p-3">
+            <div class="stat-title text-xs">Precipitation</div>
+            <div
+              class="stat-value text-2xl"
+              :class="weather.precipitation > 0 ? 'text-primary' : 'text-base-content'"
+            >
+              {{ weather.precipitation }} mm
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
