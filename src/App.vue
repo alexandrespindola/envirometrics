@@ -19,7 +19,11 @@ const selectedLocationName = computed(() => store.selectedLocation?.name || 'No 
     <div class="navbar bg-base-100 shadow-lg sticky top-0 z-50">
       <div class="flex flex-row">
         <a class="flex flex-row text-xl">
-          <img src="@/assets/img/logo.svg" alt="EnviroMetrics Logo" class="self-center  h-8 w-8 mr-2">
+          <img
+            src="@/assets/img/logo.svg"
+            alt="EnviroMetrics Logo"
+            class="self-center h-8 w-8 mr-2"
+          />
           <span class="self-center font-bold text-primary">Enviro</span>
           <span class="self-center font-normal">Metrics</span>
         </a>
